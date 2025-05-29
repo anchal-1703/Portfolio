@@ -1,0 +1,217 @@
+/* .anime-skill-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.anime-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.anime-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.anime-skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.anime-skill-card:hover {
+  transform: translateY(-8px);
+}
+
+.anime-skill-icon {
+  font-size: 2.5rem;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.anime-skill-name {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.anime-skill-bar-bg {
+  margin-top: 0.5rem;
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.anime-skill-bar {
+  height: 100%;
+  border-radius: 4px;
+  animation: growBar 1s ease forwards;
+}
+.anime-skill-section {
+  padding: 2rem;
+}
+
+.anime-skill-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.anime-skill-card:hover {
+  transform: translateY(-5px);
+}
+
+
+@keyframes growBar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+} */
+ .outercard{
+  width: 415px!important;
+ }
+
+.animeSkillSection {
+  background: #0e0e0e;
+  padding: 3rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: inset 0 8px 20px rgba(192, 93, 242, 0.386);
+}
+
+.animeTitle {
+  font-weight: 900;
+  font-size: 2.75rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #4f46e5, #ec4899, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.groupTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #6366f1;
+  padding-bottom: 0.5rem;
+  color: #666a71;
+}
+
+.skillCard {
+  background-color: #e7d3ebeb;
+  border-radius: 50%;
+  box-shadow: inset 0 8px 20px rgba(12, 7, 14, 0.459);
+  /* padding: 1rem 1rem; */
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px!important;
+  height: 80px!important;
+}
+/* Set max width for the slider */
+
+
+.skillCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.35);
+}
+
+.skillIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skillName {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #e8e8e8;
+  /* background: linear-gradient(90deg, #4f46e5, #ec4899, #f59e0b); */
+}
+
+.skillBarBg {
+  position: relative;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.skillBar {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--skill-color) 70%, #ffffff 100%);
+  transform-origin: left center;
+  animation: skillFill 1.2s ease forwards;
+}
+
+@keyframes skillFill {
+  from { width: 0; }
+  to { width: var(--skill-level); }
+}
+
+/* Responsive fixes for slick slider arrows & dots */
+
+.slick-prev, .slick-next {
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #6366f1;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  opacity: 1;
+  background-color: #4338ca;
+}
+
+.slick-prev::before, .slick-next::before {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.slick-dots li button:before {
+  font-size: 0.8rem;
+  color: #a5b4fc;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #4338ca;
+}
+
+/* Smaller screens adjustments */
+@media (max-width: 640px) {
+  .skillIcon {
+    font-size: 3.5rem;
+  }
+  .skillCard {
+    padding: 1.25rem 1rem;
+  }
+  .animeTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
