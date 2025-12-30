@@ -12,39 +12,38 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
- const projects = [
-  {
-    title: "BanasPati – AI-Powered Plant Disease Detection",
-    description: "Detects plant diseases from leaf images using ML and image processing.",
-    imgUrl: projPlant,
-  },
-  {
-    title: "House Price Prediction Model",
-    description: "Predicts housing prices using regression and multiple algorithms.",
-    imgUrl: projHouse,
-  },
-  {
-    title: "E-Bazar – E-Commerce Platform",
-    description: "E-commerce site with auth, cart, search, and order features using JS stack.",
-    imgUrl: projEcom,
-  },
-  {
-    title: "Invoice Generator System",
-    description: "Tool to automate invoice creation with detailed customer/product info.",
-    imgUrl: projInvoice,
-  },
-  {
-    title: "Event Scraper",
-    description: "Scrapes Eventbrite data with Playwright and renders it in clean HTML.",
-    imgUrl: projScraper,
-  },
-
-  {
-    title: "anchal-1703 (Portfolio)",
-    description: "Personal portfolio with projects, skills, and learning roadmap.",
-    imgUrl: projPortfolio,
-  },
-];
+  const projects = [
+    {
+      title: "Bloocube – AI-Powered Influencer Marketplace",
+      description: "Designed and developed a full-stack web platform connecting brands with content creators. Built responsive frontend with React.js, RESTful APIs with Node.js/Express, and integrated PostgreSQL database. Focused on scalability, performance optimization, and secure deployment with JWT authentication.",
+      imgUrl: projEcom,
+    },
+    {
+      title: "GST Billing System",
+      description: "Developed a comprehensive web-based GST-compliant invoicing system. Implemented product & customer management, automated tax calculations, and PDF invoice generation. Tech stack: Laravel (backend), Bootstrap & Vue.js (frontend), MySQL (database).",
+      imgUrl: projInvoice,
+    },
+    {
+      title: "BanasPati – AI-Powered Plant Disease Detection",
+      description: "ML-based system to detect plant diseases from leaf images using image processing and classification algorithms. Provides farmers with early disease detection and treatment recommendations.",
+      imgUrl: projPlant,
+    },
+    {
+      title: "E-Bazar – E-Commerce Platform",
+      description: "Full-featured e-commerce platform with user authentication, shopping cart, product search, and order management. Built with MERN stack for seamless user experience.",
+      imgUrl: projEcom,
+    },
+    {
+      title: "House Price Prediction Model",
+      description: "ML model predicting housing prices using regression algorithms. Analyzes multiple features including location, size, and amenities to provide accurate price estimates.",
+      imgUrl: projHouse,
+    },
+    {
+      title: "Event Scraper",
+      description: "Web scraping tool extracting event data from Eventbrite using Playwright. Processes and renders data in clean, structured HTML format for easy consumption.",
+      imgUrl: projScraper,
+    },
+  ];
 
   return (
     <section className="project" id="projects">
@@ -53,45 +52,28 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <h2>Featured Projects</h2>
+                  <p>A showcase of my technical expertise through real-world applications. From AI-powered marketplaces to ML-driven analytics, each project demonstrates proficiency in full-stack development, system design, and modern web technologies.</p>
+                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                      <Tab.Pane eventKey="first">
+                        <Row>
+                          {
+                            projects.map((project, index) => {
+                              return (
+                                <ProjectCard
+                                  key={index}
+                                  {...project}
                                 />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
+                              )
+                            })
+                          }
+                        </Row>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>}
             </TrackVisibility>
           </Col>
         </Row>
