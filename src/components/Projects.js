@@ -1,11 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import projBloocube from "../assets/img/bloocube.png";
+import projGST from "../assets/img/gst-billing.png";
 import projPlant from "../assets/img/plant-disease.png";
 import projHouse from "../assets/img/house-price.png";
 import projEcom from "../assets/img/ecommerce.png";
-import projInvoice from "../assets/img/invoice-generator.png";
 import projScraper from "../assets/img/event-scraper.png";
-import projPortfolio from "../assets/img/portfolio.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -16,12 +16,12 @@ export const Projects = () => {
     {
       title: "Bloocube – AI-Powered Influencer Marketplace",
       description: "Designed and developed a full-stack web platform connecting brands with content creators. Built responsive frontend with React.js, RESTful APIs with Node.js/Express, and integrated PostgreSQL database. Focused on scalability, performance optimization, and secure deployment with JWT authentication.",
-      imgUrl: projEcom,
+      imgUrl: projBloocube,
     },
     {
       title: "GST Billing System",
       description: "Developed a comprehensive web-based GST-compliant invoicing system. Implemented product & customer management, automated tax calculations, and PDF invoice generation. Tech stack: Laravel (backend), Bootstrap & Vue.js (frontend), MySQL (database).",
-      imgUrl: projInvoice,
+      imgUrl: projGST,
     },
     {
       title: "BanasPati – AI-Powered Plant Disease Detection",
