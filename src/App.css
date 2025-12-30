@@ -748,6 +748,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .resume-buttons {
@@ -794,41 +797,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transform: translateY(-3px);
 }
 
-.resume-viewer {
-  background: #1a1a1a;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  text-align: center;
-}
-
-.pdf-document {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.pdf-page {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.pdf-page canvas {
-  max-width: 100%;
-  height: auto !important;
-  border-radius: 8px;
-}
-
-.page-count {
-  color: #B8B8B8;
-  font-size: 16px;
-  margin-top: 20px;
-  font-weight: 500;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .resume-header h2 {
@@ -849,13 +817,5 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 100%;
     max-width: 300px;
     justify-content: center;
-  }
-
-  .resume-viewer {
-    padding: 15px;
-  }
-
-  .pdf-page {
-    transform: scale(0.9);
   }
 }

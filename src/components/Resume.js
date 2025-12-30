@@ -1,22 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { BsDownload, BsEye } from "react-icons/bs";
-import { Document, Page, pdfjs } from "react-pdf";
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
 import resumePDF from "../assets/Anchal_Sandhu_Resume.pdf";
 
-// Set up the worker for react-pdf from public folder
-pdfjs.GlobalWorkerOptions.workerSrc = `${process.env.PUBLIC_URL}/pdf.worker.min.js`;
-
 export const Resume = () => {
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-    }
-
     const downloadResume = () => {
         const link = document.createElement("a");
         link.href = resumePDF;
@@ -30,11 +17,11 @@ export const Resume = () => {
         <section className="resume" id="resume">
             <Container>
                 <Row className="justify-content-center">
-                    <Col md={12}>
+                    <Col md={8} className="text-center">
                         <div className="resume-header">
                             <h2>My Resume</h2>
                             <p>
-                                View my professional resume below or download it for offline reference.
+                                Download my professional resume or view it in a new tab for a detailed look at my experience, skills, and projects.
                             </p>
                             <div className="resume-buttons">
                                 <Button
@@ -53,35 +40,6 @@ export const Resume = () => {
                                     <BsEye /> View in New Tab
                                 </a>
                             </div>
-                        </div>
-                    </Col>
-                </Row>
-
-                <Row className="justify-content-center mt-4">
-                    <Col md={10} lg={8}>
-                        <div className="resume-viewer">
-                            <Document
-                                file={resumePDF}
-                                onLoadSuccess={onDocumentLoadSuccess}
-                                className="pdf-document"
-                            >
-                                {Array.from(new Array(numPages), (el, index) => (
-                                    <Page
-                                        key={`page_${index + 1}`}
-                                        pageNumber={index + 1}
-                                        renderTextLayer={true}
-                                        renderAnnotationLayer={true}
-                                        className="pdf-page"
-                                        scale={1.5}
-                                    />
-                                ))}
-                            </Document>
-
-                            {numPages && (
-                                <p className="page-count">
-                                    Total Pages: {numPages}
-                                </p>
-                            )}
                         </div>
                     </Col>
                 </Row>
